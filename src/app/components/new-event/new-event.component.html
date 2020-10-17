@@ -1,0 +1,21 @@
+<div class="timeline">
+  <div class="img-wrapper">
+    <img src="../../../assets/images/icons/car.svg">
+  </div>
+  <div class="duration">40 m</div>
+</div>
+<div class="selector">
+  <div class="new-event" (click)="openDropdown()">
+    <div class="option-name">
+      <img class="icon" src="../../../assets/images/icons/calendar.svg">
+      <div class="name">+ Add item</div>
+    </div>
+    <div class="arrow"></div>
+  </div>
+  <div class="options" [class.opened]="isExpanded" [@openClose]="isExpanded ? 'open' : 'closed'">
+    <div class="option" *ngFor="let option of eventOptions" (click)="addNewEvent(option.type)">
+      <img class="icon" [src]="getIcon(option.type)">
+      <div class="name">{{ option.title }}</div>
+    </div>
+  </div>
+</div>

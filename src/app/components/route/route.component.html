@@ -1,0 +1,5 @@
+
+<div class="event" *ngFor="let event of events; index as i">
+  <app-event-card (deleteEvent)="onDeleteEvent($event)" [event]="event"></app-event-card>
+  <app-new-event (addEvent)="onAddEvent($event, i)"></app-new-event>
+</div>

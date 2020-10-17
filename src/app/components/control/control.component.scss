@@ -1,0 +1,40 @@
+@import "../../../scss/colors";
+
+.control-block {
+  margin-right: 25px;
+  .control-name {
+    font-size: 13px;
+    color: $tuna;
+    margin-bottom: 3px;
+  }
+  .control-description {
+    color: $hit-gray;
+    font-size: 11px;
+    margin-bottom: 9px;
+  }
+  .control {
+    width: 121px;
+    height: 30px;
+    border: 1px solid $iron;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .value {
+      font-weight: bold;
+      font-size: 14px;
+      color: $cerulean;
+    }
+    button {
+      background: $white;
+      color: $cerulean;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 30px;
+      cursor: pointer;
+    }
+  }
+}

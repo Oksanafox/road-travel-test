@@ -1,0 +1,10 @@
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="edit">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12">
+<rect id="Mask" width="12" height="12" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path id="editor-pencil-pen-edit-write-glyph" fill-rule="evenodd" clip-rule="evenodd" d="M4.303 10.2534L9.60698 4.94984L6.77885 2.12175L1.47453 7.42495L4.303 10.2534ZM0.414815 11.3149L0.83316 8.06776L3.66068 10.8952L0.414815 11.3149ZM10.2608 4.29673L11.361 3.19656C11.7286 2.82894 11.3235 2.42383 11.3235 2.42383L9.30527 0.405582C9.30527 0.405582 8.90016 0.000476866 8.53254 0.368098L7.43224 1.46821L10.2608 4.29673Z" fill="#00A2D3"/>
+</g>
+</g>
+</svg>

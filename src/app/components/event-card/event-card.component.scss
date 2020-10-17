@@ -1,0 +1,133 @@
+@import "../../../scss/variables";
+@import "../../../scss/colors";
+@import "../../../scss/breakpoints";
+
+:host {
+  display: flex;
+  align-items: center;
+}
+.timeline {
+  width: $timelime-width;
+  display: block;
+  font-size: 16px;
+  color: $raven;
+  text-align: center;
+  margin-bottom: 30px;
+  background: $white;
+  z-index: 10;
+  padding: 15px 0;
+  .duration {
+    font-size: 13px;
+  }
+}
+.event-card {
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid $iron;
+  height: 120px;
+  background: $white;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: calc(100% - #{$timelime-width});
+  .description {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    .photo {
+      width: 100px;
+      height: 100px;
+      border: 1px solid $mercury;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-right: 15px;
+    }
+    .info {
+      padding-right: 15px;
+      .title {
+        color: $cerulean;
+        font-size: 18px;
+        font-weight: normal;
+      }
+      .extra-info {
+        color: $raven;
+        font-size: 13px;
+      }
+    }
+  }
+  .buttons {
+    button {
+      font-family: 'Open Sans', sans-serif;
+      width: 100px;
+      height: 30px;
+      border: 1px solid;
+      border-radius: 1px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 30px;
+      background: $white;
+      box-shadow: none;
+      display: block;
+      font-size: 13px;
+      cursor: pointer;
+      img {
+        display: none;
+      }
+      &.edit {
+        border-color: $cerulean;
+        color: $cerulean;
+        margin-bottom: 10px;
+      }
+      &.delete {
+        border-color: $bittersweet;
+        color: $bittersweet;
+      }
+      &.save {
+        border-color: $cerulean;
+        background: $cerulean;
+        color: $white;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .controls {
+    display: flex;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: $mobile) {
+  :host {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .timeline {
+    width: auto;
+    margin-bottom: 0;
+    .time, .duration {
+      display: inline-block;
+    }
+    .time {
+      margin-right: 10px;
+    }
+  }
+  .event-card {
+    width: 100%;
+    z-index: 10;
+    .buttons {
+      button {
+        width: 30px;
+        span {
+          display: none;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+  }
+  }
+}

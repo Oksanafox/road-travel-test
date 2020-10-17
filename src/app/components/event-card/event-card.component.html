@@ -1,0 +1,31 @@
+<div class="timeline">
+  <div class="time">20:00</div>
+  <div class="duration">40 m</div>
+</div>
+<div class="event-card" [class.editMode]="editMode">
+  <div class="controls" *ngIf="editMode">
+    <app-control [controlType]="controlTypes.Time"></app-control>
+    <app-control [controlType]="controlTypes.Duration"></app-control>
+  </div>
+  <div class="description" *ngIf="!editMode">
+    <div class="photo" [style.backgroundImage]="'url(' + event.img + ')'"></div>
+    <div class="info">
+      <div class="title">{{ event.title }}</div>
+      <div class="extra-info">
+        <span *ngFor="let info of event.vehicle || event.hotel || event.place | keyvalue">
+          {{ info.value }}
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="buttons">
+    <button [ngClass]="editMode ? 'save' : 'edit'" (click)="editMode = !editMode">
+      <span>{{ editMode ? 'Save' : 'Change' }}</span>
+      <img src="../../../assets/images/icons/edit.svg">
+    </button>
+    <button class="delete" (click)="delete()">
+      <span>Delete</span>
+      <img src="../../../assets/images/icons/delete.svg">
+    </button>
+  </div>
+</div>
